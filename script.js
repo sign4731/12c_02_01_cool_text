@@ -10,16 +10,21 @@ function start() {
 }
 
 function clearText() {
+  document.querySelector(".cooltext").textContent = null;
   createSpans();
   addAnimationDelay();
-  document.querySelector(".cooltext").textContent = null;
 }
 
 function createSpans() {
   letters.forEach((letter) => {
     const newSpan = document.createElement("span");
     newSpan.textContent = letter;
-    newSpan.classList.add("letter");
+    if (letter === " ") {
+      newSpan.classList.add("space");
+    } else {
+      newSpan.classList.add("letter");
+    }
+
     const currentH1 = document.querySelector(".text");
     currentH1.appendChild(newSpan);
   });

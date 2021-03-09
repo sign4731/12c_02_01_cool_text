@@ -21,6 +21,9 @@
   }
 }
 
+.space {
+  width: 0.5ch;
+}
 span {
   display: inline-block;
 }
